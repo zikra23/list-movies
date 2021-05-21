@@ -1,42 +1,4 @@
-// // penerapan call back
-// // 1. Ajax versi vanilla js
-// const searchButton = document.querySelector('.search-button');
-// const inputKeyword = document.querySelector('.input-keyword');
 
-// searchButton.addEventListener('click', function() {
-//     fetch(' http://www.omdbapi.com/?apikey=5baf3cbd&s=' + inputKeyword.value)
-//         // -> mengubah variabel yang tidak bisa dibaca menjadi bisa dibaca dengan json
-//         // -> bentuk data menjadi promise
-//         .then(response => response.json())
-//         .then(response => {
-//             const movies = response.Search;
-//             let cards = '';
-//             movies.forEach(m => {
-//                 cards += showCards(m);
-//             });
-//             const movieContainer = document.querySelector('.movie-container');
-//             movieContainer.innerHTML = cards;
-
-//             // Ketika tombol detail movie ditekan 
-//             const modalDetailButton = document.querySelectorAll('.modal-detail-button');
-//             // karena detailbutton dalam bentuk node list/array maka lakukan foreach pada tiap elemen
-//             modalDetailButton.forEach(btn => {
-//                 btn.addEventListener('click', function() {
-//                     const imdbid = this.dataset.imdbid;
-//                     fetch('http://www.omdbapi.com/?&apikey=5baf3cbd&i=' + imdbid)
-//                         .then(response => response.json())
-//                         .then(m => {
-//                             const detailMovie = showMovieDetail(m);
-//                             const modalBodyDetail = document.querySelector('.modal-body');
-//                             modalBodyDetail.innerHTML = detailMovie;
-//                         });
-//                 });
-//             });
-
-
-//         });
-//     // kalau pakai arrow function , variabel this tidak ada
-// });
 
 // CODINGAN LEBIH RAPIH
 const searchButton = document.querySelector('.search-button');
